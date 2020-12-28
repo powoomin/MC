@@ -1,0 +1,21 @@
+execute if entity @s[scores={Live=0}] run function main:super_mario_bros/ui_left/level_0
+execute if entity @s[scores={Live=1}] run function main:super_mario_bros/ui_left/level_1
+execute if entity @s[scores={Live=2}] run function main:super_mario_bros/ui_left/level_2
+execute if entity @s[scores={Live=3}] run function main:super_mario_bros/ui_left/level_3
+execute if entity @s[scores={Live=4}] run function main:super_mario_bros/ui_left/level_4
+execute if entity @s[scores={Live=5}] run function main:super_mario_bros/ui_left/level_5
+execute if entity @s[scores={Live=6}] run function main:super_mario_bros/ui_left/level_6
+execute if entity @s[scores={Live=7}] run function main:super_mario_bros/ui_left/level_7
+execute if entity @s[scores={Live=8}] run function main:super_mario_bros/ui_left/level_8
+execute if entity @s[scores={Live=9}] run function main:super_mario_bros/ui_left/level_9
+execute if entity @s[scores={Live=10}] run function main:super_mario_bros/ui_left/level_10
+execute if entity @s[scores={Live=11}] run function main:super_mario_bros/ui_left/level_11
+execute if entity @s[scores={Live=12}] run function main:super_mario_bros/ui_left/level_12
+execute if entity @s[scores={Live=13}] run function main:super_mario_bros/ui_left/level_13
+execute if entity @s[scores={Live=14}] run function main:super_mario_bros/ui_left/level_14
+execute if entity @s[scores={Live=15}] run function main:super_mario_bros/ui_left/level_15
+execute if entity @s[scores={Live=16}] run function main:super_mario_bros/ui_left/level_16
+execute if entity @s[scores={Live=17}] run function main:super_mario_bros/ui_left/level_17
+execute if entity @s[scores={Live=18}] run function main:super_mario_bros/ui_left/level_18
+execute if entity @s[scores={Live=19}] run function main:super_mario_bros/ui_left/level_19
+attribute @s minecraft:generic.attack_speed base set 0

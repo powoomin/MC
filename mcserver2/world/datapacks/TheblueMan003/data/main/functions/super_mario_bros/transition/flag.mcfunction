@@ -1,0 +1,5 @@
+execute as @e[type=minecraft:armor_stand,name=Player,scores={PowerUp=0}] at @s align x align z run summon minecraft:armor_stand ~ ~ ~0.6 {CustomName:"\"PlayerAnimation\"",ArmorItems:[{},{},{},{id:"diamond_sword",Count:1b,tag:{CustomModelData:7}}],Small:0,Invisible:1,Tags:["small","FlagAnim"]}
+execute as @e[type=minecraft:armor_stand,name=Player,scores={PowerUp=1}] at @s align x align z run summon minecraft:armor_stand ~ ~ ~0.6 {CustomName:"\"PlayerAnimation\"",ArmorItems:[{},{},{},{id:"diamond_sword",Count:1b,tag:{CustomModelData:107}}],Small:0,Invisible:1,Tags:["big","FlagAnim"]}
+execute as @e[type=minecraft:armor_stand,name=Player,scores={PowerUp=2}] at @s align x align z run summon minecraft:armor_stand ~ ~ ~0.6 {CustomName:"\"PlayerAnimation\"",ArmorItems:[{},{},{},{id:"diamond_sword",Count:1b,tag:{CustomModelData:207}}],Small:0,Invisible:1,Tags:["fire","FlagAnim"]}
+
+function main:super_mario_bros/transition/next_level

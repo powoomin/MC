@@ -1,0 +1,35 @@
+execute if entity @a[scores={Level=0}] run function main:levels/level_0
+execute if entity @a[scores={Level=1}] run function main:levels/level_1
+execute if entity @a[scores={Level=2}] run function main:levels/level_2
+execute if entity @a[scores={Level=3}] run function main:levels/level_3
+execute if entity @a[scores={Level=4}] run function main:levels/level_4
+execute if entity @a[scores={Level=5}] run function main:levels/level_5
+execute if entity @a[scores={Level=6}] run function main:levels/level_6
+execute if entity @a[scores={Level=7}] run function main:levels/level_7
+execute if entity @a[scores={Level=8}] run function main:levels/level_8
+execute if entity @a[scores={Level=9}] run function main:levels/level_9
+execute if entity @a[scores={Level=10}] run function main:levels/level_10
+execute if entity @a[scores={Level=11}] run function main:levels/level_11
+execute if entity @a[scores={Level=12}] run function main:levels/level_12
+execute if entity @a[scores={Level=13}] run function main:levels/level_13
+execute if entity @a[scores={Level=14}] run function main:levels/level_14
+execute if entity @a[scores={Level=15}] run function main:levels/level_15
+execute if entity @a[scores={Level=16}] run function main:levels/level_16
+execute if entity @a[scores={Level=17}] run function main:levels/level_17
+execute if entity @a[scores={Level=18}] run function main:levels/level_18
+execute if entity @a[scores={Level=19}] run function main:levels/level_19
+execute if entity @a[scores={Level=20}] run function main:levels/level_20
+execute if entity @a[scores={Level=21}] run function main:levels/level_21
+execute if entity @a[scores={Level=22}] run function main:levels/level_22
+execute if entity @a[scores={Level=23}] run function main:levels/level_23
+execute if entity @a[scores={Level=24}] run function main:levels/level_24
+execute if entity @a[scores={Level=25}] run function main:levels/level_25
+execute if entity @a[scores={Level=26}] run function main:levels/level_26
+execute if entity @a[scores={Level=27}] run function main:levels/level_27
+execute if entity @a[scores={Level=28}] run function main:levels/level_28
+execute if entity @a[scores={Level=29}] run function main:levels/level_29
+execute if entity @a[scores={Level=30}] run function main:levels/level_30
+execute if entity @a[scores={Level=31}] run function main:levels/level_31
+execute if entity @a[scores={Level=32}] run execute in minecraft:overworld run tp @a -34.64 23.00 59.84 -179.69 5.16
+execute if entity @a[scores={Level=32}] run tag @a remove PlayingIn2D
+execute if entity @a[scores={Level=32}] run function smb_extra:main/hubreload
