@@ -1,0 +1,45 @@
+[11:22:28] [Server thread/INFO]: com.mojang.authlib.GameProfile@2d269aa9[id=<null>,name=Choco2109,properties={},legacy=false] (/58.237.85.194:49793) lost connection: Disconnected
+[11:22:31] [User Authenticator #4/INFO]: UUID of player Choco2109 is 04909e15-6c7f-49e9-8e3a-d84166ad2dae
+[11:22:31] [Server thread/INFO]: Choco2109[/58.237.85.194:49797] logged in with entity id 4889 at ([world]448.6763699901527, 73.0, -815.6641523528334)
+[11:22:46] [Server thread/INFO]: Choco2109 issued server command: /weather clear
+[11:22:46] [Server thread/INFO]: [Choco2109: Set the weather to clear]
+[11:33:28] [User Authenticator #5/INFO]: UUID of player Choco2109 is 04909e15-6c7f-49e9-8e3a-d84166ad2dae
+[11:33:28] [Server thread/INFO]: Choco2109 lost connection: You logged in from another location
+[11:33:28] [Server thread/INFO]: Choco2109 left the game
+[11:33:29] [Server thread/INFO]: Choco2109[/58.237.85.194:65347] logged in with entity id 6984 at ([world]448.38641460813324, 71.0, -830.1789368362192)
+[11:41:48] [Server thread/INFO]: Choco2109 issued server command: /weather clear
+[11:41:48] [Server thread/INFO]: [Choco2109: Set the weather to clear]
+[11:47:38] [Server thread/INFO]: Choco2109 issued server command: /weather clear
+[11:47:38] [Server thread/INFO]: [Choco2109: Set the weather to clear]
+[11:49:24] [Server thread/INFO]: Choco2109 issued server command: /weather clear
+[11:49:24] [Server thread/INFO]: [Choco2109: Set the weather to clear]
+[12:06:51] [Server thread/INFO]: Choco2109 lost connection: Disconnected
+[12:06:51] [Server thread/INFO]: Choco2109 left the game
+[13:58:50] [User Authenticator #6/INFO]: UUID of player Arunesia is 6cfd642a-b387-4f53-b85b-66986d4d3d9b
+[13:58:51] [Server thread/INFO]: Arunesia[/121.182.166.97:56089] logged in with entity id 12639 at ([world]-144.55878621371852, 68.0, -55.503154111570055)
+[14:01:01] [User Authenticator #7/INFO]: UUID of player Choco2109 is 04909e15-6c7f-49e9-8e3a-d84166ad2dae
+[14:01:01] [Server thread/INFO]: Choco2109[/58.237.85.194:50977] logged in with entity id 13228 at ([world]452.98451718547864, 71.0, -823.892719939052)
+[14:02:55] [Server thread/INFO]: Arunesia lost connection: Disconnected
+[14:02:55] [Server thread/INFO]: Arunesia left the game
+[14:02:59] [Server thread/INFO]: Choco2109 lost connection: Disconnected
+[14:02:59] [Server thread/INFO]: Choco2109 left the game
+[14:03:34] [Server thread/INFO]: Stopping the server
+[14:03:34] [Server thread/INFO]: Stopping server
+[14:03:34] [Server thread/INFO]: [InvSort] Disabling InvSort v1.2.0
+[14:03:34] [Server thread/INFO]: [AntiCreeper] Disabling AntiCreeper v5.1
+[14:03:34] [Server thread/INFO]: [SinglePlayerSleep] Disabling SinglePlayerSleep v1.13_2.13.44
+[14:03:34] [Server thread/INFO]: **************************************
+[14:03:34] [Server thread/INFO]: SinglePlayerSleep v1.13_2.13.44 is DISABLED
+[14:03:34] [Server thread/INFO]: **************************************
+[14:03:34] [Server thread/INFO]: [Timber] Disabling Timber v1.0.9
+[14:03:34] [Server thread/INFO]: Saving players
+[14:03:34] [Server thread/INFO]: Saving worlds
+[14:03:34] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[14:03:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:03:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:03:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
