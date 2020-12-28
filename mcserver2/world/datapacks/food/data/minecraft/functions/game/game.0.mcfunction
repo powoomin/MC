@@ -1,0 +1,53 @@
+execute store result score role.1 game.info run execute if entity @a[nbt={Inventory:[{tag:{role.list:1},Slot:103b}]}]
+execute store result score role.2 game.info run execute if entity @a[nbt={Inventory:[{tag:{role.list:2},Slot:103b}]}]
+
+# role list 1
+execute as @a[nbt={Inventory:[{tag:{massage:1}}]},nbt=!{Inventory:[{tag:{massage:1},Slot:7b}]}] at @s run clear @s structure_void{massage:1}
+execute as @a[nbt=!{Inventory:[{tag:{role.list:1,role.check:1},Slot:103b}]},nbt=!{Inventory:[{tag:{role.list:1}}]}] at @s if score role.1 game.info matches 0..5 run replaceitem entity @s hotbar.7 leather_helmet{role:1,role.list:1,role.check:0,HideFlags:63,Unbreakable:1b,display:{Name:'[{"text":"","italic":false},{"text":"조리사 ","color":"gray","bold":true},{"text":"선택하기"}]',Lore:['{"text":""}','{"text":" 재료를 조리해 전달하는 일을 하게 될 거에요.","color":"gray","italic":false}','[{"text":"","color":"gray","italic":false},{"text":"머리에 쓰고 있으면 "},{"text":"조리사","bold":true},{"text":"의 일을 하게 될 겁니다."}]','{"text":""}','[{"text":"","color":"gray","italic":false},{"text":" 최소 "},{"text":"1명","color":"aqua","bold":true},{"text":", 최대 "},{"text":"6명","color":"aqua","bold":true},{"text":"까지 이 일을 할 수 있으며,"}]','[{"text":"","color":"gray","italic":false},{"text":"6명","color":"white","bold":true},{"text":"까지 일할 수 있어요."}]','{"text":""}','{"text":" < 쉬운 난이도 / 단합력과 소통 필요 >","color":"white","italic":false}'],color:16777215},AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,Operation:0,UUID:[I;0,0,0,0],Slot:"head"}]} 1
+
+execute as @a[nbt={Inventory:[{tag:{role.list:1,role.check:0},Slot:103b}]}] at @s run replaceitem entity @s armor.head leather_helmet{role.list:1,role.check:1,HideFlags:63,Unbreakable:1b,display:{Name:'[{"text":"","italic":false},{"text":"조리사","color":"gray","bold":true},{"text":" 선택 완료","color":"red"}]',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":" 조리사","bold":true},{"text":"를 선택을 했습니다."}]','[{"text":"","color":"gray","italic":false},{"text":"요리사","color":"white","bold":true},{"text":"가 선택될 때까지 기다려주세요."}]'],color:16777215},Enchantments:[{id:404,lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,Operation:0,UUID:[I;0,0,0,0],Slot:"head"}]}
+
+execute as @a[nbt={Inventory:[{tag:{role.list:1,role.check:1},Slot:103b}]},nbt=!{Inventory:[{tag:{massage:1},Slot:7b}]}] at @s if score role.1 game.info matches 0.. run replaceitem entity @a hotbar.7 structure_void{massage:1,display:{Name:'{"text":"선택됨","color":"dark_gray","italic":false}',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":"이미 "},{"text":"조리사","bold":true},{"text":"를 "},{"text":"선택","color":"red"},{"text":"하셨습니다."}]','[{"text":"","color":"gray","italic":false},{"text":" 역할","color":"aqua"},{"text":"을 "},{"text":"취소","underlined":true},{"text":"하고 싶다면 모자를 벗어주세요."}]']}}
+
+execute as @a[nbt={Inventory:[{tag:{massage:1},Slot:7b}]},nbt=!{Inventory:[{tag:{role.list:1,role.check:1},Slot:103b}]}] at @s run clear @s leather_helmet{role.list:1}
+execute as @a[nbt={Inventory:[{tag:{role.list:1,role.check:0},Slot:7b}]},nbt={Inventory:[{tag:{role.list:1,role.check:1}}]}] at @s run clear @s leather_helmet{role.list:1}
+
+execute as @a[nbt=!{Inventory:[{tag:{role.list:1,role.check:1},Slot:103b}]},nbt={Inventory:[{tag:{role.massage:2}}]},nbt=!{Inventory:[{tag:{role.massage:2},Slot:7b}]}] at @s run clear @s barrier{role.massage:2}
+execute if score role.1 game.info matches 6.. run replaceitem entity @s hotbar.7 barrier{massage:1,role.massage:2,display:{Name:'{"text":"선택 불가","color":"dark_red","italic":false}',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":"모든 "},{"text":"조리사","color":"gray","bold":true},{"text":"들이 "},{"text":"선택","color":"red"},{"text":"되었습니다."}]']}}
+
+# role list 2
+execute as @a[nbt=!{Inventory:[{tag:{role.list:2}}]}] at @s if score role.2 game.info matches 0 run replaceitem entity @s hotbar.8 leather_helmet{role:1,role.list:2,role.check:0,HideFlags:63,Unbreakable:1b,display:{Name:'[{"text":"","italic":false},{"text":"요리사 ","bold":true},{"text":"선택하기"}]',Lore:['{"text":""}','{"text":" 재료를 손님에게 대접하는 일을 하게 될 거에요.","color":"gray","italic":false}','[{"text":"","color":"gray","italic":false},{"text":"머리에 쓰고 있으면 "},{"text":"요리사","color":"white","bold":true},{"text":"의 일을 하게 될 겁니다."}]','{"text":""}','[{"text":"","color":"gray","italic":false},{"text":"반드시 "},{"text":"1명","color":"aqua","bold":true},{"text":"만 선택할 수 있으며,"}]','[{"text":"","color":"gray","italic":false},{"text":" 현재까지 아직 아무도 "},{"text":"선택","color":"red"},{"text":"하지 않았어요."}]','{"text":""}','{"text":" < 어려운 난이도 / 기억력과 순발력 필요 >","color":"white","italic":false}'],color:7358767}} 1
+
+execute as @a[nbt={Inventory:[{tag:{role.list:2,role.check:0},Slot:103b}]}] at @s if score role.2 game.info matches 1.. run replaceitem entity @s armor.head leather_helmet{role.list:2,role.check:1,HideFlags:63,Unbreakable:1b,display:{Name:'[{"text":"","italic":false},{"text":"요리사","bold":true},{"text":" 선택 완료","color":"red"}]',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":" 요리사","color":"white","bold":true},{"text":"를 선택을 했습니다."}]','[{"text":"","color":"gray","italic":false},{"text":"조리사","bold":true},{"text":"가 선택될 때까지 기다려주세요."}]'],color:7358767},Enchantments:[{id:404,lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,Operation:0,UUID:[I;0,0,0,0],Slot:"head"}]}
+
+execute as @a[nbt={Inventory:[{tag:{role.list:2,role.check:1},Slot:103b}]},nbt={Inventory:[{tag:{role.massage:5}}]},nbt=!{Inventory:[{tag:{role.massage:5},Slot:8b}]}] at @s run clear @s structure_void{role.massage:5}
+execute as @a[nbt={Inventory:[{tag:{role.list:2,role.check:1},Slot:103b}]},nbt=!{Inventory:[{tag:{role.massage:5},Slot:8b}]}] at @s if score role.2 game.info matches 1.. run replaceitem entity @s hotbar.8 structure_void{massage:1,role.massage:5,display:{Name:'{"text":"선택됨","color":"dark_gray","italic":false}',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":"이미 "},{"text":"요리사","color":"white","bold":true},{"text":"를 "},{"text":"선택","color":"red"},{"text":"하셨습니다."}]','[{"text":"","color":"gray","italic":false},{"text":" 역할","color":"aqua"},{"text":"을 "},{"text":"취소","underlined":true},{"text":"하고 싶다면 모자를 벗어주세요."}]']}}
+
+execute as @a[nbt=!{Inventory:[{tag:{role.list:2,role.check:1},Slot:103b}]},nbt={Inventory:[{tag:{role.massage:6}}]},nbt=!{Inventory:[{tag:{role.massage:6},Slot:8b}]}] at @s run clear @s barrier{role.massage:6}
+execute as @a[nbt=!{Inventory:[{tag:{role.list:2,role.check:1},Slot:103b}]},nbt=!{Inventory:[{tag:{role.massage:6},Slot:8b}]}] at @s if score role.2 game.info matches 1.. run replaceitem entity @s hotbar.8 barrier{massage:1,role.massage:6,display:{Name:'{"text":"선택 불가","color":"dark_red","italic":false}',Lore:['{"text":""}','[{"text":"","color":"gray","italic":false},{"text":"누가 이미 "},{"text":"요리사","color":"white","bold":true},{"text":"를 "},{"text":"선택","color":"red"},{"text":"하였습니다."}]']}}
+
+execute as @a at @s if score role.2 game.info matches 0 run clear @s leather_helmet{role.list:2,role.check:1}
+
+execute as @a at @s run kill @e[distance=..2,nbt={Item:{tag:{massage:1}}}]
+execute as @a at @s run kill @e[distance=..2,nbt={Item:{tag:{role.list:1,role.check:0}}}]
+execute as @a at @s run kill @e[distance=..2,nbt={Item:{tag:{role.list:2,role.check:0}}}]
+execute as @a at @s run kill @e[distance=..2,nbt={Item:{tag:{role.list:1,role.check:1}}}]
+execute as @a at @s run kill @e[distance=..2,nbt={Item:{tag:{role.list:2,role.check:1}}}]
+
+execute if score role.1 game.info matches 1..2 run scoreboard players set player.count.level game.info 1
+execute if score role.1 game.info matches 3..4 run scoreboard players set player.count.level game.info 2
+execute if score role.1 game.info matches 5..6 run scoreboard players set player.count.level game.info 3
+
+execute if score role.1 game.info matches 0 if score role.2 game.info matches 0 unless block 0 8 -10 birch_wall_sign[facing=west] run setblock 0 8 -10 birch_wall_sign[facing=west]
+execute if score role.1 game.info matches 0 if score role.2 game.info matches 0 run data merge block 0 8 -10 {Text1:'{"text":"게임 시작 불가","color":"red"}',Text2:'{"text":""}',Text3:'[{"text":"","color":"white"},{"text":"조리사","color":"gray","bold":true},{"text":"가 "},{"text":"부족","color":"dark_red","underlined":true},{"text":"함"}]',Text4:'[{"text":"","color":"white"},{"text":"요리사","color":"white","bold":true},{"text":"가 "},{"text":"부족","color":"dark_red","underlined":true},{"text":"함"}]'}
+
+execute if score role.1 game.info matches 0 if score role.2 game.info matches 1.. unless block 0 8 -10 jungle_wall_sign[facing=west] run setblock 0 8 -10 jungle_wall_sign[facing=west]
+execute if score role.1 game.info matches 0 if score role.2 game.info matches 1.. run data merge block 0 8 -10 {Text1:'{"text":"게임 시작 불가","color":"red"}',Text2:'{"text":""}',Text3:'[{"text":"","color":"white"},{"text":"조리사","color":"gray","bold":true},{"text":"가 "},{"text":"부족","color":"dark_red","underlined":true},{"text":"함"}]',Text4:'[{"text":"","color":"white"},{"text":"요리사","color":"white","bold":true},{"text":"가 "},{"text":"충분","color":"dark_green","underlined":true},{"text":"함"}]'}
+
+execute if score role.1 game.info matches 1.. if score role.2 game.info matches 0 unless block 0 8 -10 jungle_wall_sign[facing=west] run setblock 0 8 -10 jungle_wall_sign[facing=west]
+execute if score role.1 game.info matches 1.. if score role.2 game.info matches 0 run data merge block 0 8 -10 {Text1:'{"text":"게임 시작 불가","color":"red"}',Text2:'{"text":""}',Text3:'[{"text":"","color":"white"},{"text":"조리사","color":"gray","bold":true},{"text":"가 "},{"text":"충분","color":"dark_green","underlined":true},{"text":"함"}]',Text4:'[{"text":"","color":"white"},{"text":"요리사","color":"white","bold":true},{"text":"가 "},{"text":"부족","color":"dark_red","underlined":true},{"text":"함"}]'}
+
+execute if score role.1 game.info matches 1.. if score role.2 game.info matches 1.. unless block 0 8 -10 dark_oak_wall_sign[facing=west] run setblock 0 8 -10 dark_oak_wall_sign[facing=west]
+execute if score role.1 game.info matches 1.. if score role.2 game.info matches 1.. run data merge block 0 8 -10 {Text1:'{"text":"게임 시작 가능","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set game game.info 1"}}',Text2:'{"text":"> click <","color":"aqua","italic":true}',Text3:'[{"text":"","color":"white"},{"text":"조리사","color":"gray","bold":true},{"text":"가 "},{"text":"충분","color":"dark_green","underlined":true},{"text":"함"}]',Text4:'[{"text":"","color":"white"},{"text":"요리사","color":"white","bold":true},{"text":"가 "},{"text":"충분","color":"dark_green","underlined":true},{"text":"함"}]'}
+
+function game/introduce

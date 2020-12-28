@@ -1,0 +1,14 @@
+execute as @s[scores={food.1.cooldown=-1}] at @s run function food/inventory/food.1.-1
+execute as @s[scores={food.1.cooldown=0..}] at @s run function food/inventory/food.1.0
+execute as @s[scores={food.2.cooldown=-1}] at @s run function food/inventory/food.2.-1
+execute as @s[scores={food.2.cooldown=0..}] at @s run function food/inventory/food.2.0
+execute as @s[scores={food.3.cooldown=-1}] at @s run function food/inventory/food.3.-1
+execute as @s[scores={food.3.cooldown=0..}] at @s run function food/inventory/food.3.0
+execute as @s[scores={food.4.cooldown=-1}] at @s run function food/inventory/food.4.-1
+execute as @s[scores={food.4.cooldown=0..}] at @s run function food/inventory/food.4.0
+execute as @s[scores={food.5.cooldown=-1}] at @s run function food/inventory/food.5.-1
+execute as @s[scores={food.5.cooldown=0..}] at @s run function food/inventory/food.5.0
+execute as @s[scores={food.6.cooldown=-1}] at @s run function food/inventory/food.6.-1
+execute as @s[scores={food.6.cooldown=0..}] at @s run function food/inventory/food.6.0
+execute as @s[scores={food.7.cooldown=-1}] at @s run function food/inventory/food.7.-1
+execute as @s[scores={food.7.cooldown=0..}] at @s run function food/inventory/food.7.0
