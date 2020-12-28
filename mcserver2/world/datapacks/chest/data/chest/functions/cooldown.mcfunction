@@ -1,0 +1,1 @@
+execute if score @s Cooldown <= Cooldown10 Cooldown run function chest:add_coins
