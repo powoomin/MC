@@ -1,1 +1,0 @@
-scoreboard players remove @a Live 1

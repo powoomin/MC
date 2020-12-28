@@ -1,1 +1,0 @@
-scoreboard players set @a Music_Tick -1
