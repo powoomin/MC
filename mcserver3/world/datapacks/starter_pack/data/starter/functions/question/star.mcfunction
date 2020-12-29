@@ -1,4 +1,0 @@
-execute as @e[type=villager] at @s if block ~ ~2 ~ yellow_wool run summon armor_stand ~ ~1.1 ~ {Passengers:[{id:armor_stand,Tags:["top","star"],Invisible:1}],Tags:["move","left","bottom","star"],Invisible:1}
-execute as @e[type=villager] at @s if block ~ ~2 ~ yellow_wool run replaceitem entity @e[type=minecraft:armor_stand,tag=star,tag=bottom] armor.head minecraft:yellow_stained_glass_pane
-execute as @e[type=villager] at @s if block ~ ~2 ~ yellow_wool run playsound block.note_block.bit ambient @a ~ ~ ~ 10 1
-execute as @e[type=villager] at @s if block ~ ~2 ~ yellow_wool run setblock ~ ~2 ~ coarse_dirt

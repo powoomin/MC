@@ -1,0 +1,16 @@
+{
+	"values": [
+		"minecraft:glass",
+		"minecraft:fire",
+		"minecraft:crafting_table",
+		"minecraft:furnace",
+		"minecraft:oak_fence_gate",
+		"minecraft:oak_slab",
+		"minecraft:oak_stairs",
+		"minecraft:oak_planks",
+		"minecraft:spruce_planks",
+		"minecraft:spruce_slab",
+		"minecraft:spruce_stairs",
+		"minecraft:spruce_planks"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"values": [
+		"minecraft:air",
+		"minecraft:barrier",
+		"minecraft:cave_air",
+		"minecraft:void_air",
+		"minecraft:torch",
+		"minecraft:ladder",
+		"minecraft:wall_torch",
+		"minecraft:kelp_plant",
+		"minecraft:bubble_column",
+		"minecraft:dead_bush",
+		"minecraft:grass",
+		"minecraft:redstone_wire",
+		"minecraft:tall_grass",
+		"minecraft:seagrass",
+		"minecraft:tall_seagrass",
+		"minecraft:iron_bars",
+		"minecraft:glass_pane",
+		"minecraft:lantern",
+		"minecraft:vine",
+		"#minecraft:slabs",
+		"#minecraft:buttons",
+		"#minecraft:flower_pots",
+		"#minecraft:small_flowers",
+		"#minecraft:carpets",
+		"#minecraft:banners",
+		"#minecraft:doors",
+		"#minecraft:trapdoors",
+		"#minecraft:signs"
+	]
+}

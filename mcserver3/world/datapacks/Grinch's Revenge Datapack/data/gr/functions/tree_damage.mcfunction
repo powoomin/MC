@@ -1,0 +1,9 @@
+scoreboard players remove @s[scores={treedamage=1..}] treedamage 1
+execute if entity @s[scores={treedamage=1..}] run bossbar set gr:def color white
+execute if entity @s[scores={treedamage=1..}] run execute as @a at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.3 2
+execute if entity @s[scores={treedamage=1..,rng=0..7}] run bossbar set gr:def name {"text":"[!] THE CHRISTMAS TREE IS BEING ATTACKED [!]","color":"red"}
+execute if entity @s[scores={treedamage=1..,rng=8..14}] run bossbar set gr:def name {"text":"[!] THE CHRISTMAS TREE IS BEING ATTACKED [!]","color":"gold"}
+execute if entity @s[scores={treedamage=1..,rng=15..20}] run bossbar set gr:def name {"text":"[!] THE CHRISTMAS TREE IS BEING ATTACKED [!]","color":"yellow"}
+execute if entity @s[scores={treedamage=0}] run bossbar set gr:def color red
+execute if entity @s[scores={treedamage=0,bossid=0}] run bossbar set gr:def name [{"text":"Wave ","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"wave"}},{"text":"/","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"maxwaves"}},{"text":" - ","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"killedamount"}},{"text":"/","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"mobamount"}},{"text":" Mobs Defeated","color":"red"}]
+execute if entity @s[scores={treedamage=0,bossid=1..}] run bossbar set gr:def name [{"text":"Wave ","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"wave"}},{"text":"/","color":"red"},{"score":{"name":"@e[tag=sv,limit=1]","objective":"maxwaves"}},{"text":" - Defeat the Boss!","color":"red"}]

@@ -1,0 +1,13 @@
+scoreboard players set @e[tag=sv] ai 0
+execute if entity @a[scores={tracked=1..}] if entity @e[tag=sv,scores={diff=1..2}] run effect give @s glowing 1 0 true
+execute unless entity @a[scores={tracked=1..}] run summon armor_stand ~ ~1 ~ {CustomNameVisible:0b,CustomName:'{"text":"Ray Laser","color":"yellow","bold":true,"italic":false}',NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["bullet","prepbullete","enemybullet","ray"]}
+execute as @e[limit=1,sort=random,distance=1..,tag=mob,tag=onlyplayer] at @s unless entity @a[scores={tracked=1..}] if entity @e[tag=sv,scores={diff=2..}] run summon armor_stand ~ ~1 ~ {CustomNameVisible:0b,CustomName:'{"text":"Ray Laser","color":"yellow","bold":true,"italic":false}',NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["bullet","prepbullete","enemybullet","ray"]}
+#execute as @e[limit=1,sort=random,distance=1..,tag=mob,tag=onlyplayer] at @s unless entity @a[scores={tracked=1..}] if entity @e[tag=sv,scores={diff=3..}] run summon armor_stand ~ ~1 ~ {CustomNameVisible:0b,CustomName:'{"text":"Ray Laser","color":"yellow","bold":true,"italic":false}',NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["bullet","prepbullete","enemybullet","ray"]}
+execute unless entity @s[tag=fire] if entity @a[scores={tracked=1..}] run summon armor_stand ~ ~1 ~ {CustomNameVisible:0b,CustomName:'{"text":"Ice Laser","color":"aqua","bold":true,"italic":false}',NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["bullet","prepbullete","enemybullet"]}
+execute unless entity @s[tag=fire] if entity @a[scores={tracked=1..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~1 ~ 1000 0.5
+execute if entity @s[tag=fire] if entity @a[scores={tracked=1..}] run summon armor_stand ~ ~1 ~ {CustomNameVisible:0b,CustomName:'{"text":"Flame","color":"gold","bold":true,"italic":false}',NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["bullet","prepbullete","enemybullet","fire"]}
+execute if entity @s[tag=fire] if entity @a[scores={tracked=1..}] run playsound block.fire.extinguish master @a ~ ~1 ~ 1000 2
+execute as @e[tag=prepbullete,tag=ray] at @s run tp @s ~ ~ ~ facing entity @r[gamemode=adventure] eyes
+execute as @e[tag=prepbullete,tag=!ray] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=adventure,scores={tracked=1..}] eyes
+execute if entity @a[scores={tracked=1..}] run tp @s ~ ~ ~ facing entity @p[gamemode=adventure,scores={tracked=1..}] eyes
+execute as @e[tag=prepbullete] at @s run tag @s remove prepbullete

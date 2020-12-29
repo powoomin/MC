@@ -1,3 +1,0 @@
-execute as @e[type=villager] at @s if block ~ ~2 ~ minecraft:oak_planks run playsound minecraft:block.note_block.bell ambient @a ~ ~ ~ 10 1
-execute as @e[type=villager] at @s if block ~ ~2 ~ minecraft:oak_planks run summon armor_stand ~ ~0.5 ~1 {CustomName:"\"\\uE006\\uE000\\uE006\"",CustomNameVisible:1,NoGravity:1b,Invisible:1,Tags:["coin"]}
-execute as @e[type=villager] at @s if block ~ ~2 ~ minecraft:oak_planks run setblock ~ ~2 ~ coarse_dirt
